@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Her Special Day</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <video autoplay muted loop playsinline id="background-video">
+    <source src="video/love_ved.mp4" type="video/mp4">
+  </video>
+
+  <div class="container">
+    <div id="sec-countdown" class="section active">
+      <h1>Your Birthday is Comiiiiing</h1>
+      <p>يلا يلا بسرعه الوقت قرب يابه😘</p>
+      <div class="timer">
+        <div class="time-box"><span id="days">00</span>Days</div>
+        <div class="time-box"><span id="hours">00</span>Hours</div>
+        <div class="time-box"><span id="minutes">00</span>Mins</div>
+        <div class="time-box"><span id="seconds">00</span>Secs</div>
+      </div>
+      <button class="btn" onclick="nextSection('sec-gift')">Open Surprise</button>
+    </div>
+
+    <div id="sec-gift" class="section">
+      <h1>يلا بسم الله افتحي الهدييييه </h1>
+      <div class="gift-box" onclick="nextSection('sec-letter')">🎁</div>
+      <p>اووووووووووي غمضي عيونك اول شبيج🤣🤣🤣🤣؟</p>
+    </div>
+
+    <div id="sec-letter" class="section">
+      <h1>كل سنة وانت مزة وبخير❤️</h1>
+      <p>Wishing you the happiest birthday filled with joy, laughter, and everything you love most in the world!</p>
+      <button class="btn" onclick="nextSection('sec-memories')">Our Memories</button>
+    </div>
+
+    <div id="sec-memories" class="section">
+      <h1>تتذكري لحظاتنا دي يا حبيبتي 🫂❤️؟</h1>
+      <div class="grid">
+        <div class="polaroid"><img src="photos/1.jpg" alt="Memory 1"></div>
+        <div class="polaroid"><img src="photos/2.jpg" alt="Memory 2"></div>
+        <div class="polaroid"><img src="photos/3.jpg" alt="Memory 3"></div>
+        <div class="polaroid"><img src="photos/4.jpg" alt="Memory 4"></div>
+        <div class="polaroid"><img src="photos/5.jpg" alt="Memory 5"></div>
+        <div class="polaroid"><img src="photos/6.jpg" alt="Memory 6"></div>
+        <div class="polaroid"><img src="photos/7.jpg" alt="Memory 7"></div>
+        <div class="polaroid"><img src="photos/8.jpg" alt="Memory 8"></div>
+        <div class="polaroid"><img src="photos/9.jpg" alt="Memory 9"></div>
+      </div>
+      <button class="btn" onclick="nextSection('sec-video')">حاجة تانية اتوقع حتفرحك اكثر👀</button>
+    </div>
+
+    <div id="sec-video" class="section">
+      <h1>A Moment For You</h1>
+      <video controls>
+        <source src="your-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <br>
+      <button class="btn" onclick="nextSection('sec-wishes')">Birthday Wishes</button>
+    </div>
+
+    <div id="sec-wishes" class="section">
+      <h1>Birthday Wishes</h1>
+      <p>Thank you for being such an incredible person. Always & Forever.</p>
+      <button class="btn" onclick="nextSection('sec-countdown')">Replay From Start</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
